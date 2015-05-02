@@ -4,48 +4,53 @@
 
 var jenkinsapi = require("jenkins-api");
 
-var jenkins = jenkinsapi.init("http://localhost:4321");
+var jenkins = jenkinsapi.init("http://admin:admin@localhost:4321");
 
-jenkins.all_jobs(function (err, data) {
-    if (err) {
-        console.error(err);
-    }
-    console.log(data);
-});
+//jenkins.all_jobs(function (err, data) {
+//    if (err) {
+//        console.error(err);
+//    }
+//    console.log(data);
+//});
 
-var jobId = "testJob1";
+var jobId = "nodeJob2";
 
 //job info
-jenkins.job_info(jobId, function (err, data) {
-    if (err) {
-        return console.log(err);
-    }
+//jenkins.job_info(jobId, function (err, data) {
+//    if (err) {
+//        return console.log(err);
+//    }
+//    console.log(data)
+//});
+
+jenkins.last_build_report(jobId, function(err, data) {
+    if (err){ return console.log(err); }
     console.log(data)
 });
 
 //last build info
-jenkins.last_build_info(jobId, function (err, data) {
-    if (err) {
-        return console.log(err);
-    }
-    console.log(data)
-});
+//jenkins.last_build_info(jobId, function (err, data) {
+//    if (err) {
+//        return console.log(err);
+//    }
+//    console.log(data)
+//});
 
 // last build report
-jenkins.last_build_report(jobId, function (err, data) {
-    if (err) {
-        return console.log(err);
-    }
-    console.log(data)
-});
+//jenkins.last_build_report(jobId, function (err, data) {
+//    if (err) {
+//        return console.log(err);
+//    }
+//    console.log(data)
+//});
 
 // get config.xml
-jenkins.get_config_xml(jobId, function (err, data) {
-    if (err) {
-        return console.log(err);
-    }
-    console.log(data)
-});
+//jenkins.get_config_xml(jobId, function (err, data) {
+//    if (err) {
+//        return console.log(err);
+//    }
+//    console.log(data)
+//});
 
 // copy job
 //jenkins.copy_job(jobId, "testJob2", function (config) {
@@ -61,12 +66,12 @@ jenkins.get_config_xml(jobId, function (err, data) {
 //});
 
 // delete job
-jenkins.delete_job("testJob2", function (err, data) {
-    if (err) {
-        return console.log(err);
-    }
-    console.log(data);
-});
+//jenkins.delete_job("testJob2", function (err, data) {
+//    if (err) {
+//        return console.log(err);
+//    }
+//    console.log(data);
+//});
 
 //jenkins.computers(function (err, data) {
 //    if (err) {

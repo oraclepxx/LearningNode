@@ -4,7 +4,12 @@
 
 var jenkins = require("jenkins");
 
-var jenkins = jenkins("http://localhost:4321");
+// Non auth
+//var jenkins = jenkins("http://localhost:4321");
+
+// user/pass auth
+var jenkins = jenkins("http://admin:admin@localhost:4321");
+
 
 var configTemplate = "<?xml version='1.0' encoding='UTF-8'?>" +
     "<project>" +
@@ -25,7 +30,7 @@ var configTemplate = "<?xml version='1.0' encoding='UTF-8'?>" +
     "</project>";
 
 
-//jenkinsClient.info(function (err, data) {
+//jenkins.info(function (err, data) {
 //    if (err) {
 //        console.error(err);
 //    }
@@ -33,7 +38,7 @@ var configTemplate = "<?xml version='1.0' encoding='UTF-8'?>" +
 //});
 
 
-//jenkinsClient.build.get('testJob1', 3, function (err, data) {
+//jenkins.build.get('testJob1', 3, function (err, data) {
 //    if (err) {
 //        console.error(err);
 //    }
@@ -41,7 +46,7 @@ var configTemplate = "<?xml version='1.0' encoding='UTF-8'?>" +
 //    console.log('build', data);
 //});
 
-//jenkinsClient.build.log('testJob1', 3, function (err, data) {
+//jenkins.build.log('nodeJob2', 38, function (err, data) {
 //    if (err) {
 //        console.error(err);
 //    }
@@ -50,13 +55,13 @@ var configTemplate = "<?xml version='1.0' encoding='UTF-8'?>" +
 //});
 
 
-//jenkinsClient.job.build('testJob1', function (err) {
-//    if (err) {
-//        console.error(err);
-//    }
-//});
+jenkins.job.build('nodeJob2', function (err) {
+    if (err) {
+        console.error(err);
+    }
+});
 
-//jenkinsClient.build.stop('testJob1', 5, function (err) {
+//jenkins.build.stop('testJob1', 5, function (err) {
 //    if (err) {
 //        console.error(err);
 //    }
@@ -137,10 +142,54 @@ var configTemplate = "<?xml version='1.0' encoding='UTF-8'?>" +
 //    console.log('node', data);
 //});
 
-jenkins.node.list(function(err, data) {
-    if (err) {
-        console.error(err);
-    }
+//jenkins.node.list(function(err, data) {
+//    if (err) {
+//        console.error(err);
+//    }
+//
+//    console.log('nodes', data);
+//});
 
-    console.log('nodes', data);
-});
+//jenkins.queue.list(function (err, data) {
+//    if (err) {
+//        console.error(err);
+//    }
+//
+//    console.log('queues', data);
+//});
+
+//jenkins.view.exists('All', function (err, exists) {
+//    if (err) {
+//        console.error(err);
+//    }
+//
+//    console.log('exists', exists);
+//});
+//
+//jenkins.view.get("testView", function (err, data) {
+//    if (err) {
+//        console.error(err);
+//    }
+//
+//    console.log(data);
+//});
+
+//jenkins.view.list(function (err, data) {
+//    if (err) {
+//        console.error(err);
+//    }
+//
+//    console.log('views', data);
+//});
+
+//jenkins.view.destroy("testView", function (err) {
+//    if (err) {
+//        console.error(err);
+//    }
+//});
+
+//jenkins.view.add('testView', 'job1', function (err) {
+//    if (err) {
+//        console.error(err);
+//    }
+//});

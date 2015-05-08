@@ -1,0 +1,126 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'xml2js' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 warn package.json LearningNode@1.0.0 No repository field.
+5 warn package.json LearningNode@1.0.0 No README data
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'xml2js', null ]
+8 verbose cache add name=undefined spec="xml2js" args=["xml2js",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'xml2js',
+9 verbose parsed url   path: 'xml2js',
+9 verbose parsed url   href: 'xml2js' }
+10 silly lockFile ad82ed2d-xml2js xml2js
+11 verbose lock xml2js /Users/xinpan/.npm/ad82ed2d-xml2js.lock
+12 silly lockFile ad82ed2d-xml2js xml2js
+13 silly lockFile ad82ed2d-xml2js xml2js
+14 verbose addNamed [ 'xml2js', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile f8b9c896-xml2js xml2js@
+17 verbose lock xml2js@ /Users/xinpan/.npm/f8b9c896-xml2js.lock
+18 silly addNameRange { name: 'xml2js', range: '*', hasData: false }
+19 verbose request where is /xml2js
+20 verbose request registry https://registry.npmjs.org/
+21 verbose request id 636e97af04940c20
+22 verbose url raw /xml2js
+23 verbose url resolving [ 'https://registry.npmjs.org/', './xml2js' ]
+24 verbose url resolved https://registry.npmjs.org/xml2js
+25 verbose request where is https://registry.npmjs.org/xml2js
+26 info trying registry request attempt 1 at 14:35:46
+27 http GET https://registry.npmjs.org/xml2js
+28 http 200 https://registry.npmjs.org/xml2js
+29 silly registry.get cb [ 200,
+29 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+29 silly registry.get     etag: '"73AP9EZO7Z7R018JT2WKB0M8P"',
+29 silly registry.get     'content-type': 'application/json',
+29 silly registry.get     'cache-control': 'max-age=60',
+29 silly registry.get     'content-length': '81798',
+29 silly registry.get     'accept-ranges': 'bytes',
+29 silly registry.get     date: 'Wed, 06 May 2015 21:35:45 GMT',
+29 silly registry.get     via: '1.1 varnish',
+29 silly registry.get     age: '3',
+29 silly registry.get     connection: 'keep-alive',
+29 silly registry.get     'x-served-by': 'cache-sjc3126-SJC',
+29 silly registry.get     'x-cache': 'HIT',
+29 silly registry.get     'x-cache-hits': '2',
+29 silly registry.get     'x-timer': 'S1430948145.822802,VS0,VE0',
+29 silly registry.get     vary: 'Accept' } ]
+30 silly addNameRange number 2 { name: 'xml2js', range: '*', hasData: true }
+31 silly addNameRange versions [ 'xml2js',
+31 silly addNameRange   [ '0.1.0',
+31 silly addNameRange     '0.1.1',
+31 silly addNameRange     '0.1.2',
+31 silly addNameRange     '0.1.3',
+31 silly addNameRange     '0.1.4',
+31 silly addNameRange     '0.1.5',
+31 silly addNameRange     '0.1.6',
+31 silly addNameRange     '0.1.7',
+31 silly addNameRange     '0.1.8',
+31 silly addNameRange     '0.1.9',
+31 silly addNameRange     '0.1.10',
+31 silly addNameRange     '0.1.11',
+31 silly addNameRange     '0.1.12',
+31 silly addNameRange     '0.1.13',
+31 silly addNameRange     '0.1.14',
+31 silly addNameRange     '0.2.0',
+31 silly addNameRange     '0.2.1',
+31 silly addNameRange     '0.2.2',
+31 silly addNameRange     '0.2.3',
+31 silly addNameRange     '0.2.4',
+31 silly addNameRange     '0.2.5',
+31 silly addNameRange     '0.2.6',
+31 silly addNameRange     '0.2.7',
+31 silly addNameRange     '0.2.8',
+31 silly addNameRange     '0.4.0',
+31 silly addNameRange     '0.4.1',
+31 silly addNameRange     '0.4.2',
+31 silly addNameRange     '0.4.3',
+31 silly addNameRange     '0.4.4',
+31 silly addNameRange     '0.4.5',
+31 silly addNameRange     '0.4.6',
+31 silly addNameRange     '0.4.7',
+31 silly addNameRange     '0.4.8' ] ]
+32 verbose addNamed [ 'xml2js', '0.4.8' ]
+33 verbose addNamed [ '0.4.8', '0.4.8' ]
+34 silly lockFile d0a88786-xml2js-0-4-8 xml2js@0.4.8
+35 verbose lock xml2js@0.4.8 /Users/xinpan/.npm/d0a88786-xml2js-0-4-8.lock
+36 silly lockFile 0553b71e-pmjs-org-xml2js-xml2js-0-4-8-tgz https://registry.npmjs.org/xml2js/-/xml2js-0.4.8.tgz
+37 verbose lock https://registry.npmjs.org/xml2js/-/xml2js-0.4.8.tgz /Users/xinpan/.npm/0553b71e-pmjs-org-xml2js-xml2js-0-4-8-tgz.lock
+38 verbose addRemoteTarball [ 'https://registry.npmjs.org/xml2js/-/xml2js-0.4.8.tgz',
+38 verbose addRemoteTarball   '9fe56bdb2a4931fdfcefb4cedfdb29d89c32f5a1' ]
+39 info retry fetch attempt 1 at 14:35:47
+40 verbose fetch to= /var/folders/0t/78lskwsx3_s148v09zvxdnlh0000gp/T/npm-28152-er6YJZTV/registry.npmjs.org/xml2js/-/xml2js-0.4.8.tgz
+41 http GET https://registry.npmjs.org/xml2js/-/xml2js-0.4.8.tgz
+42 http 200 https://registry.npmjs.org/xml2js/-/xml2js-0.4.8.tgz
+43 silly lockFile 0553b71e-pmjs-org-xml2js-xml2js-0-4-8-tgz https://registry.npmjs.org/xml2js/-/xml2js-0.4.8.tgz
+44 silly lockFile 0553b71e-pmjs-org-xml2js-xml2js-0-4-8-tgz https://registry.npmjs.org/xml2js/-/xml2js-0.4.8.tgz
+45 silly lockFile d0a88786-xml2js-0-4-8 xml2js@0.4.8
+46 silly lockFile d0a88786-xml2js-0-4-8 xml2js@0.4.8
+47 silly lockFile f8b9c896-xml2js xml2js@
+48 silly lockFile f8b9c896-xml2js xml2js@
+49 error Error: EACCES, mkdir '/Users/xinpan/.npm/xml2js/0.4.8'
+49 error  { [Error: EACCES, mkdir '/Users/xinpan/.npm/xml2js/0.4.8']
+49 error   errno: 3,
+49 error   code: 'EACCES',
+49 error   path: '/Users/xinpan/.npm/xml2js/0.4.8',
+49 error   parent: 'LearningNode' }
+50 error Please try running this command again as root/Administrator.
+51 error System Darwin 13.4.0
+52 error command "node" "/usr/local/bin/npm" "install" "xml2js"
+53 error cwd /Users/xinpan/Work/WebstormProjects/LearningNode
+54 error node -v v0.10.35
+55 error npm -v 1.4.28
+56 error path /Users/xinpan/.npm/xml2js/0.4.8
+57 error code EACCES
+58 error errno 3
+59 error stack Error: EACCES, mkdir '/Users/xinpan/.npm/xml2js/0.4.8'
+60 verbose exit [ 3, true ]

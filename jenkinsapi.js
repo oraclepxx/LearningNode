@@ -23,10 +23,12 @@ var jobId = "nodeJob2";
 //    console.log(data)
 //});
 
-jenkins.last_build_report(jobId, function(err, data) {
-    if (err){ return console.log(err); }
-    console.log(data)
-});
+//jenkins.last_build_report(jobId, function (err, data) {
+//    if (err) {
+//        return console.log(err);
+//    }
+//    console.log(data)
+//});
 
 //last build info
 //jenkins.last_build_info(jobId, function (err, data) {
@@ -80,4 +82,32 @@ jenkins.last_build_report(jobId, function(err, data) {
 //    console.log(data)
 //});
 
+//jenkins.build('nodeJob2', function (err, data) {
+//    if (err) {
+//        return console.error(err);
+//    }
+//    console.log(data)
+//});
+
+//jenkins.last_build_info('nodeJob2', function (err, data) {
+//    if (err) {
+//        return console.log(err);
+//    }
+//    console.log(data)
+//});
+
+//jenkins.build('nodeJob2', {key: 'value'}, function (err, data) {
+//    if (err) {
+//        return console.log(err);
+//    }
+//    console.log(data)
+//});
+
+jenkins.job.get('nodeJob2', function(err, data){
+    if(err){
+        return console.error(err);
+    }
+
+    console.log(data);
+});
 

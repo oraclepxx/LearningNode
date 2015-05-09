@@ -3,6 +3,7 @@
  */
 
 var events = require('events');
+var emitter = new events.EventEmitter;
 
 function Account() {
 
@@ -49,4 +50,26 @@ account.deposit(1000);
 account.deposit(200);
 account.withdraw(500);
 account.withdraw(2000);
+
+
+function CarShow(){
+    events.EventEmitter.call(this);
+
+    this.show = function(brand, year, color){
+        this.emit('show', brand, year, color);
+    }
+}
+
+CarShow.prototype.__proto__ = events.EventEmitter.prototype;
+
+function registerCar(brand, year, color){
+    console.log(year + " " + color + " " + brand + ' is showing');
+};
+
+var carShow = new CarShow();
+carShow.on('show', registerCar);
+
+carShow.show("Benz", "2015", "red");
+carShow.show("Bugatti", "2016", "yellow");
+carShow.show("Lamborghini", "2016", "blue");
 

@@ -303,6 +303,7 @@ jenkins.job.get('nodeJob2', function (err, data) {
                     console.log("Failures: " + failures);
 
                     var cases = ts.childNodes();
+
                     for (var index in cases) {
                         var caseItem = cases[index];
                         var caseFailures = caseItem.childNodes();

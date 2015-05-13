@@ -4,16 +4,16 @@
 
 var http = require('http');
 
-var fileLoc = 'http://localhost:4321/job/nodeJob2/ws/junit/TEST-Asuite.xml';
+//var fileLoc = 'http://localhost:4321/job/nodeJob2/ws/junit/TEST-Asuite.xml';
 
 var options = {
     hostname: 'localhost',
-    port: '4321',
-    path: '/job/nodeJob2/ws/junit/TEST-Asuite.xml'
+    port: '9999',
+    method: 'GET'
 };
 
 function handleResponse(resp) {
-    var result = '';
+    var result = "";
     resp.on('data', function (err, chunk) {
         if (err) {
             console.error(err);
@@ -23,7 +23,9 @@ function handleResponse(resp) {
     });
 
     resp.on('end', function () {
-        console.log('result: ' + result);
+        console.log('resp status: ' + resp.statusCode);
+        console.log('resp header: ' + resp.headers);
+        console.log('result: ' + result.toString());
     });
 }
 

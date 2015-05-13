@@ -12,6 +12,33 @@ var libxmljs = require("libxmljs");
 // user/pass auth
 var jenkins = jenkins("http://admin:admin@localhost:4321");
 
+var xmlBody = '<?xml version="1.0" encoding="UTF-8" ?>' +
+    '<testsuites>' +
+    '<testsuite name="A suite" errors="2" tests="5" failures="2" time="0.005" timestamp="Thu May 07 2015 11:13:06 GMT-0700 (PDT)">' +
+    '<testcase assertions="0" classname="A suite" name="contains specs with an expectation" time="0.001">' +
+    '<failure><![CDATA[Expected true to be false.]]></failure>' +
+    '</testcase>' +
+    '<testcase assertions="0" classname="A suite" name="and so is a specs" time="0">' +
+    '</testcase>' +
+    '<testcase assertions="0" classname="A suite" name="and has a positive case" time="0">' +
+    '</testcase>' +
+    '<testcase assertions="0" classname="A suite" name="and can have a negative case" time="0">' +
+    '</testcase>' +
+    '<testcase assertions="0" classname="A suite" name="test number" time="0.001">' +
+    '<failure><![CDATA[Expected 3 to be 4.]]></failure>' +
+    '</testcase>' +
+    '</testsuite>' +
+    '<testsuite name="B suite" errors="2" tests="3" failures="1" time="0.005" timestamp="Thu May 07 2015 11:13:06 GMT-0700 (PDT)">' +
+    '<testcase assertions="0" classname="B suite" name="and so is a specs" time="0">' +
+    '</testcase>' +
+    '<testcase assertions="0" classname="B suite" name="and can have a negative case" time="0">' +
+    '</testcase>' +
+    '<testcase assertions="0" classname="B suite" name="test number" time="0.001">' +
+    '<failure><![CDATA[Expected 11 to be 4.]]></failure>' +
+    '</testcase>' +
+    '</testsuite>' +
+    '</testsuites>';
+
 
 //var configTemplate = "<?xml version='1.0' encoding='UTF-8'?>" +
 //    "<project>" +
@@ -255,35 +282,6 @@ jenkins.job.get('nodeJob2', function (err, data) {
 
             response.on('end', function () {
                 //console.log(body);
-
-                var xmlBody = '<?xml version="1.0" encoding="UTF-8" ?>' +
-
-                    '<testsuites>' +
-                        '<testsuite name="A suite" errors="2" tests="5" failures="2" time="0.005" timestamp="Thu May 07 2015 11:13:06 GMT-0700 (PDT)">' +
-                            '<testcase assertions="0" classname="A suite" name="contains specs with an expectation" time="0.001">' +
-                                '<failure><![CDATA[Expected true to be false.]]></failure>' +
-                            '</testcase>' +
-                            '<testcase assertions="0" classname="A suite" name="and so is a specs" time="0">' +
-                            '</testcase>' +
-                            '<testcase assertions="0" classname="A suite" name="and has a positive case" time="0">' +
-                            '</testcase>' +
-                            '<testcase assertions="0" classname="A suite" name="and can have a negative case" time="0">' +
-                            '</testcase>' +
-                            '<testcase assertions="0" classname="A suite" name="test number" time="0.001">' +
-                                '<failure><![CDATA[Expected 3 to be 4.]]></failure>' +
-                            '</testcase>' +
-                        '</testsuite>' +
-                        '<testsuite name="B suite" errors="2" tests="3" failures="1" time="0.005" timestamp="Thu May 07 2015 11:13:06 GMT-0700 (PDT)">' +
-                            '<testcase assertions="0" classname="B suite" name="and so is a specs" time="0">' +
-                            '</testcase>' +
-                            '<testcase assertions="0" classname="B suite" name="and can have a negative case" time="0">' +
-                            '</testcase>' +
-                            '<testcase assertions="0" classname="B suite" name="test number" time="0.001">' +
-                                '<failure><![CDATA[Expected 11 to be 4.]]></failure>' +
-                            '</testcase>' +
-                        '</testsuite>' +
-                    '</testsuites>';
-
 
                 var testDoc = libxmljs.parseXml(xmlBody);
                 var suite = testDoc.get('//testsuites');

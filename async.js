@@ -6,7 +6,7 @@ function asyncFunction(arg, callback) {
     console.log("Handling " + arg);
     setTimeout(function () {
         callback(arg * 2);
-    }, 2000);
+    }, 3000);
 }
 
 function final() {

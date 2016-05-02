@@ -13,7 +13,7 @@ var jenkins = jenkinsapi.init("http://admin:admin@localhost:4321");
 //    console.log(data);
 //});
 
-var jobId = "nodeJob2";
+var jobId = "nodeJob3";
 
 //job info
 //jenkins.job_info(jobId, function (err, data) {
